@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0
+Icon=/home/user/Pictures/icons/position.png
+Type=Link
+URL=file:///home/user/contiki-2.7/tools/cooja/apps/mobility/positions.dat
+#Icon[en_GB]=/usr/share/icons/Humanity/places/48/stock_smart-playlist.svg
+Name[en_GB]=Positions
+Name=Positions
