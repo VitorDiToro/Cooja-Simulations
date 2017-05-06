@@ -1,0 +1,10 @@
+
+[Desktop Entry]
+Type=Application
+Name=Cooja
+Comment=Cooja the Contiki Network Simulator
+Icon=/home/user/Pictures/icons/cooja.png
+Exec=sh -c "cd /home/user/contiki/tools/cooja && ant run"
+Terminal=true
+Categories=Development;IDE;Java;
+
