@@ -25,26 +25,33 @@
 #	- Add desktop icons, "Cooja" and "Positions"
 #	- Add update to "contiki submodule"
 #
+#    v0.3 2017-05-20, Vitor R. Di Toro":
+#	- Fixed directory path (Fixed v0.2)
+#
 #---------------------------------------------------------------------
 #
 # License:
 #    This is free software, licensed under the GNU General Public License v2.
 #
 
-local = 'pwd'
+## Variables
+##################
 
-#===========================#
-# Copy Icons & Icons Images #
-#===========================#
+# Get the working dir
+d="$(pwd)/.."
+
+
+## Copy Icons & Icons Images
+##############################
 mkdir ~/Pictures/icons
-cp $pwd/icons/* ~/Pictures/icons
-cp $pwd/'desktop files'/* ~/Desktop
+cp -r "$d"/icons/ ~/Pictures/icons
+cp -r "$d"/'desktop files'/ ~/Desktop
 
-#============================#
-#   Installations & Update   #
-#============================#
 
-#Update "contiki submodule"
+## Installations & Update
+###########################
+
+# Update "contiki submodule"
 cd ~/contiki/
 git submodule update --init
 cd ~
@@ -53,21 +60,17 @@ cd ~
 #    tree - list contents of directories in a tree-like format.
 sudo apt-get install tree -y
 
-
 # Install "terminator"
 #    terminator - Multiple GNOME terminals in one window
 sudo apt-get install terminator -y
-
 
 # Force install a new version of Mozilla Firefox
 #    firefox - a free and open source web browser from Mozilla
 sudo apt-get install -f firefox -y
 
-
 # Intall "vim"
 #    vim - Vi IMproved, a programmers text editor
 sudo apt-get install vim -y
-
 
 # Install "ack-grep"
 #    ack-grep - grep-like text finder
