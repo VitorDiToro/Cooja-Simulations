@@ -6,7 +6,7 @@
 #-------------------------------------------------------------------------------
 #
 # History
-#
+# 
 #    v0.1 2017-05-20, Vitor R. Di Toro:
 #	- Created this script
 #	- Copy shortcuts to desktop
