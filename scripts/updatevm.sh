@@ -24,9 +24,14 @@
 #	- Change section name "Installation" to "Installation and Update"
 #	- Add desktop icons, "Cooja" and "Positions"
 #	- Add update to "contiki submodule"
+#	- Add Variables section
 #
-#    v0.3 2017-05-20, Vitor R. Di Toro":
+#    v0.3 2017-05-20, Vitor R. Di Toro:
 #	- Fixed directory path (Fixed v0.2)
+#
+#    v0.4 2017-05-20, Vitor R. Di Toro:
+#	- Update all applications
+#	- Update distro to 16.04 LTS
 #
 #---------------------------------------------------------------------
 #
@@ -55,6 +60,21 @@ cp -r "$d"/'desktop files'/ ~/Desktop
 cd ~/contiki/
 git submodule update --init
 cd ~
+
+# Update repository database
+sudo apt-get update
+
+# Update all applications
+sudo apt-get upgrade -y
+
+# Update to Ubuntu 16.04 LTS
+sudo apt-get distroupdate -y
+
+# Autoremove
+sudo apt-get autoremove -y
+
+# Autoclean
+sudo apt-get autoclean -y
 
 # Install "tree"
 #    tree - list contents of directories in a tree-like format.
